@@ -4,7 +4,7 @@ import SubmitBtn from "./SubmitBtn";
 import Navbar from "./Navbar";
 import NavLinks from "./NavLinks";
 import Hero from "./Hero";
-import FeaturedProducts from "./featuredProducts";
+import FeaturedProducts from "./FeaturedProducts";
 import SectionTitle from "./SectionTitle";
 import Filter from "./Filter";
 import ProductsContainer from "./ProductsContainer";
