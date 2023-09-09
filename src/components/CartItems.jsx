@@ -8,7 +8,7 @@ const CartItems = ({ item }) => {
   const dispatch = useDispatch();
 
   const amountHandler = (e) => {
-    // e.target.value 拿到的會是個 string (記得要轉換成 number)
+    // e.target.value 拿到的會是 string (記得要轉換成 number)
     dispatch(editItem({ cartID, amount: parseInt(e.target.value) }));
   };
   const removeHandler = () => {
