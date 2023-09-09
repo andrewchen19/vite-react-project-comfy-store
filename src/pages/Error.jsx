@@ -2,7 +2,7 @@ import { NavLink, useRouteError } from "react-router-dom";
 
 const Error = () => {
   const error = useRouteError();
-  // console.error(error);
+  console.error(error);
 
   // page not found
   if (error.status === 404) {

@@ -5,6 +5,7 @@ import {
   ModifiedPaginationContainer,
 } from "../components";
 import { customFetch } from "../utilize";
+import { toast } from "react-toastify";
 
 const ordersQuery = (params, user) => {
   const { page } = params;
@@ -26,6 +27,8 @@ export const loader =
   async ({ request }) => {
     // restrict access
     const user = store.getState().user.user;
+    console.log(user);
+
     if (!user) {
       toast.warning("Please log in first", {
         icon: "😵",
@@ -36,7 +39,7 @@ export const loader =
     // parse the url , 拿取 search params (查詢參數)
     const url = new URL(request.url);
     const params = Object.fromEntries(url.searchParams);
-    console.log(params);
+    // console.log(params);
 
     try {
       const response = await queryClient.ensureQueryData(
