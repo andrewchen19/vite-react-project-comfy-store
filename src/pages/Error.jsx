@@ -14,7 +14,7 @@ const Error = () => {
             page not found
           </h1>
           <p className="mt-3 text-lg leading-8">
-            Sorry, we couldn’t find the page you’re looking for.
+            Sorry, we couldn’t find the page you’re looking for
           </p>
           <div className="mt-10">
             <NavLink to="/" className="btn btn-sm btn-outline btn-error">
