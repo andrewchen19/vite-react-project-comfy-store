@@ -29,7 +29,9 @@ export const action =
       const errorMessage =
         error?.response?.data?.error?.message ||
         "Please double check your identification";
-      toast.error(errorMessage);
+      toast.error(errorMessage, {
+        icon: "😵",
+      });
       // 記得最後一定要 return
       return null;
     }
