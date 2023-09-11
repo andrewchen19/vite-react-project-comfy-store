@@ -20,7 +20,7 @@ export const action =
       // 解決辦法：使用 App.jsx 傳進來的 store 以及其 method .dispatch 代替 useDispatch
       store.dispatch(loginUser(response.data));
       toast.success("Logged in successfully", {
-        icon: "😎",
+        icon: "✋🏽",
       });
       // 記得最後一定要 return
       return redirect("/");
