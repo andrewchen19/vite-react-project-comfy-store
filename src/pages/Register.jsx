@@ -12,7 +12,9 @@ export const action = async ({ request }) => {
   try {
     const response = await customFetch.post("/auth/local/register", formObject);
     // console.log(response);
-    toast.success("Account created successfully");
+    toast.success("Account created successfully", {
+      icon: "😎",
+    });
     // 記得最後一定要 return
     return redirect("/login");
   } catch (error) {
