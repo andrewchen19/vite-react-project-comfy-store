@@ -29,6 +29,7 @@ export const action =
       const response = await customFetch.post(
         "/orders",
         { data },
+        // Bearer 與 token 之間記得要空一格
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
