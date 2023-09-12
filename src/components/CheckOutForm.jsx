@@ -60,8 +60,8 @@ export const action =
         icon: "😵",
       });
 
-      // if token expired (401) or token missing (403) , redirect to login page
-      if (error?.response?.status === 401 || 403) {
+      //if token expired (401) or token missing (403) , redirect to login page
+      if (error.response.status === 401 || error.response.status === 403) {
         return redirect("/login");
       }
 
