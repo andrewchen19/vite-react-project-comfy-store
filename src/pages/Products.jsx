@@ -34,16 +34,22 @@ export const loader =
     const params = Object.fromEntries(url.searchParams);
     // console.log(params);
 
-    const response = await queryClient.ensureQueryData(
-      filterProductsQuery(params)
-    );
-    // console.log(response);
+    try {
+      const response = await queryClient.ensureQueryData(
+        filterProductsQuery(params)
+      );
+      // console.log(response);
 
-    return {
-      products: response.data.data,
-      meta: response.data.meta,
-      params,
-    };
+      return {
+        products: response.data.data,
+        meta: response.data.meta,
+        params,
+      };
+    } catch (error) {
+      console.log(error);
+
+      return null;
+    }
   };
 
 const Products = () => {
