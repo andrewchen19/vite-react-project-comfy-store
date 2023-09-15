@@ -10,6 +10,8 @@ const featuredProductsQuery = {
 };
 
 export const loader = (queryClient) => async () => {
+  // 有 <SingleError> 來處理錯誤
+  // 這邊不用加上 try catch statement
   const response = await queryClient.ensureQueryData(featuredProductsQuery);
   // console.log(response);
   const products = response.data.data;
