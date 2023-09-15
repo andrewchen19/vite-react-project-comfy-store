@@ -4,6 +4,10 @@ const ModifiedPaginationContainer = () => {
   const { meta } = useLoaderData();
   const { page, pageCount } = meta.pagination;
 
+  // conditional rendering
+  // 當總頁面數量小於 2 時，不會出現 pagination container
+  if (pageCount < 2) return null;
+
   const location = useLocation();
   const { pathname, search } = location;
 
@@ -71,10 +75,6 @@ const ModifiedPaginationContainer = () => {
 
     return pageButtons;
   };
-
-  // conditional rendering
-  // 當總頁面數量小於 2 時，不會出現 pagination container
-  if (pageCount < 2) return null;
 
   return (
     <div className="mt-16 flex justify-center">
