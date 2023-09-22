@@ -61,6 +61,7 @@ const SingleProduct = () => {
           <li>
             <NavLink to="/products">Products</NavLink>
           </li>
+          <li className="capitalize">{title}</li>
         </ul>
       </div>
       <div className="mt-6 grid gap-x-8 gap-y-12 items-center md:grid-cols-2 lg:gap-x-16">
