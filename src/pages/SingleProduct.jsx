@@ -125,7 +125,6 @@ const SingleProduct = () => {
               type="button"
               className="btn btn-primary"
               onClick={() => dispatch(addItem({ product: cartProduct }))}
-              //
             >
               Add to Cart
             </button>
