@@ -25,7 +25,7 @@ const ProductsContainer = () => {
   return (
     <>
       {/* header */}
-      <div className="pb-4 border-b-[1px] border-base-300 flex justify-between items-center">
+      <div className="pb-4 border-b border-base-300 flex justify-between items-center">
         <div>
           <h4>
             {totalProducts} product{totalProducts > 1 && "s"}
